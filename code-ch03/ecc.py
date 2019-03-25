@@ -288,12 +288,17 @@ class ECCTest(TestCase):
             (47, 71, 117, 141, 60, 139),
             (143, 98, 76, 66, 47, 71),
         )
-
+        for xy in additions:
+            p1 =  Point(FieldElement(xy[0],prime),FieldElement(xy[1],prime),a,b)
+            p2 =  Point(FieldElement(xy[2],prime),FieldElement(xy[3],prime),a,b)
+            p3 =  Point(FieldElement(xy[4],prime),FieldElement(xy[5],prime),a,b)           
+            self.assertEqual(p1 + p2, p3)
+           
         # loop over additions
         # initialize x's and y's as FieldElements
         # create p1, p2 and p3 as Points
         # check p1+p2==p3
-        raise NotImplementedError
+        #raise NotImplementedError
 
     def test_rmul(self):
         # tests the following scalar multiplications

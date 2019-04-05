@@ -181,7 +181,7 @@ z = int.from_bytes(hash256('Programming Bitcoin!'), 'big')
 >>> r = (k*G).x.num
 >>> k_inv = pow(k, N-2, N)
 >>> s = (z+r*e) * k_inv % N
->>> print(e*G)
+>>> c
 S256Point(f01d6b9018ab421dd410404cb869072065522bf85734008f105cf385a023a80f, \
 0eba29d0f0c5408ed681984dc525982abefccd9f7ff01dd26da4999cf3f6a295)
 >>> print(hex(z))
